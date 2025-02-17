@@ -8,14 +8,14 @@ import { Button } from "../ui/button";
 const Hero = () => {
   return (
     <div className='w-full px-8 '>
-      <div className='w-full z-10 absolute bg-transparent pt-24 flex gap-8 flex-col'>
+      <div className='w-fit z-10 absolute bg-transparent pt-24 flex gap-8 flex-col'>
         {" "}
-        <div className='text-5xl font-semibold leading-tight text-gray-800'>
+        <div className='text-5xl font-semibold leading-tight text-gray-800 w-full'>
           Let’s explore Bali the fun way <br />
           I’ll show you the real Bali <br />
           like a local!
         </div>
-        <div>
+        <div className='w-fit'>
           <Button className='rounded-full px-8 py-4 font-semibold bg-gray-800'>
             Contact Me
           </Button>

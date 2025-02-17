@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export type clientDataTypes = {
   uom: string;
   qty: number;
@@ -12,4 +14,11 @@ export interface SectionTitleTypes {
 export interface DestinationListTypes {
   items: object;
   onItemChange: (item: { name: string; link: string }) => void;
+}
+
+export interface TestimonialCardTypes {
+  name: string;
+  country: string;
+  description: string;
+  profilePicture: string | StaticImageData;
 }
