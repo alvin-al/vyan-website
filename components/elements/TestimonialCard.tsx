@@ -12,9 +12,9 @@ const TestimonialCard = ({
 }: TestimonialCardTypes) => {
   return (
     <TextArea>
-      <div className='flex gap-4 flex-col py-10'>
-        <BiSolidQuoteRight size='2em' />
-        <div className='text-xl'>{description}</div>
+      <div className='flex gap-4 flex-col py-10 text-gray-800'>
+        <BiSolidQuoteRight className='text-gray-300' size='2em' />
+        <div className='text-xl leading-normal'>{description}</div>
         <div className='flex gap-4 items-center'>
           <div className='w-16 h-16 object-fill rounded-full overflow-hidden'>
             <Image

@@ -10,9 +10,9 @@ const clientDataContent = [
 
 const About = () => {
   return (
-    <div className='px-8'>
+    <div className='px-8 '>
       <TextArea>
-        <div className='text-4xl leading-snug text-gray-800'>
+        <div className='text-3xl leading-snug text-gray-800'>
           Hey, I’m Vyan! I’ve been showing travelers around this island for
           years. No rushed schedules or tourist traps—just epic spots, hidden
           gems, and good vibes. <br />

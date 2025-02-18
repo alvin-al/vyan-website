@@ -5,7 +5,7 @@ import coverImage from "@/public/image 17.png";
 const Video = () => {
   return (
     <div className='px-8 '>
-      <div className='w-full h-screen overflow-hidden object-cover'>
+      <div className='w-full overflow-hidden object-cover'>
         {" "}
         <Image
           src={coverImage}

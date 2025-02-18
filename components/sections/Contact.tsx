@@ -34,7 +34,7 @@ const Contact = () => {
       </div>
       <StepListSquare items={bookStep} />
       <TextArea>
-        <div className='text-4xl leading-snug text-gray-800'>
+        <div className='text-3xl leading-snug text-gray-800 mt-12'>
           Have any questions or ready to plan your Bali adventure? <br />
           Feel free to reach out! Lets connect!
         </div>

@@ -18,7 +18,7 @@ const Gallery = () => {
     <div className='px-8 grid'>
       <SectionTitle black>GALLERY</SectionTitle>
       <TextArea>
-        <div className='text-4xl leading-snug text-gray-800 my-16'>
+        <div className='text-3xl leading-snug text-gray-800 my-16'>
           Take a glimpse into the unforgettable moments of Bali! From stunning
           landscapes to amazing experiences, our gallery captures the magic of
           every journey. Let these photos inspire your next adventure!
