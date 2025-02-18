@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className='text-sm font-medium px-8 py-2 border-gray-800 border-t flex justify-between '>
+    <div className='w-full text-sm font-medium px-4 md:px-8 py-2 border-gray-800 border-t flex justify-between '>
       © 2025 Vyan Abimanyu{" "}
       <span>
         Website by

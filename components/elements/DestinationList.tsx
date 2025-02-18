@@ -32,7 +32,7 @@ const DestinationList: React.FC<
 
   return (
     <div>
-      <ul className='text-2xl grid'>
+      <ul className='text-base md:text-2xl grid'>
         {items.map((item) => {
           const isActive = activeList.name === item.name;
           return (
@@ -43,7 +43,7 @@ const DestinationList: React.FC<
                 onClick={() => handleClick(item)}
                 className={`${
                   isActive ? "transition font-semibold underline" : ""
-                } hover:font-semibold w-fit py-1`}
+                } hover:font-semibold w-fit lg:py-1 py-[2px]`}
               >
                 {item.name}
               </button>

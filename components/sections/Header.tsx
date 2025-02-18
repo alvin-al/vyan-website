@@ -18,13 +18,13 @@ const menu = [
 const Header = () => {
   return (
     <div
-      className={`py-6 text-xl ${quicksand.className} font-bold flex flow-row relative px-8 text-gray-800`}
+      className={`py-6 text-xl ${quicksand.className} font-bold flex flow-row relative px-4 md:px-8 text-gray-800 `}
     >
       <div className='hover:opacity-85'>
         <Link href='/'>Vyan Abimanyu</Link>
       </div>
       <div>
-        <ul className='flex flex-row gap-4 items-center font-medium text-base absolute left-1/2 -translate-x-1/2'>
+        <ul className='hidden lg:flex flex-row gap-4 items-center font-medium text-base absolute left-1/2 -translate-x-1/2'>
           {menu.map((item, index) => {
             return <li key={index}>{item.title}</li>;
           })}

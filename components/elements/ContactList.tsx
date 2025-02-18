@@ -13,14 +13,19 @@ const socialLink = [
 
 const ContactList = () => {
   return (
-    <div className='flex gap-4'>
+    <div className='flex flex-wrap w-fit h-full gap-4 lg:gap-4'>
       {socialLink.map((item) => (
-        <Link href={item.link} key={item.title}>
-          <Button variant={"outline"}>
-            <span className=''>{item.icon}</span>
+        <Button
+          variant='outline'
+          className='flex items-center gap-2'
+          key={item.title}
+          asChild
+        >
+          <Link href={item.link}>
+            <span>{item.icon}</span>
             {item.title}
-          </Button>
-        </Link>
+          </Link>
+        </Button>
       ))}
     </div>
   );

@@ -28,19 +28,21 @@ const bookStep = [
 
 const Contact = () => {
   return (
-    <div>
-      <div className='px-8'>
+    <div className='w-screen lg:w-full'>
+      <div className='px-4 md:px-8'>
         <SectionTitle black>HOW TO BOOK</SectionTitle>
       </div>
       <StepListSquare items={bookStep} />
-      <TextArea>
-        <div className='text-3xl leading-snug text-gray-800 mt-12'>
-          Have any questions or ready to plan your Bali adventure? <br />
-          Feel free to reach out! Lets connect!
-        </div>
-        <EmailForm />
-        <ContactList />
-      </TextArea>
+      <div className='px-4 md:px-0 w-screen lg:w-full'>
+        <TextArea>
+          <div className='text-xl md:text-3xl leading-normal text-gray-800 lg:mt-12'>
+            Have any questions or ready to plan your Bali adventure? <br />
+            Feel free to reach out! Lets connect!
+          </div>
+          <EmailForm />
+          <ContactList />
+        </TextArea>
+      </div>
     </div>
   );
 };

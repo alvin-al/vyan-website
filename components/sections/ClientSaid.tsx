@@ -38,8 +38,8 @@ const imageList = [
 
 const ClientSaid = () => {
   return (
-    <div className='h-fit'>
-      <div className='px-8'>
+    <div className='h-fit  w-screen lg:w-fit'>
+      <div className='px-4 md:px-8'>
         <SectionTitle black>WHAT MY CLIENT SAID</SectionTitle>
         <div className='py-12'>
           {testimonialData.map((item) => (

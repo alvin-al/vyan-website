@@ -10,11 +10,11 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "rounded-full px-8 py-4 text-white font-semibold bg-gray-800 w-fit mt-4 hover:bg-gray-600",
+          "rounded-full px-8 py-4 text-white font-semibold bg-gray-800 w-fit hover:bg-gray-600",
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
         outline:
-          "rounded-full px-8 py-4 bg-white font-semibold border border-gray-800 text-gray-800 w-fit mt-4 hover:bg-gray-200 hover:text-accent-foreground",
+          "rounded-full px-8 py-4 bg-white font-semibold border border-gray-800 text-gray-800 w-fit hover:bg-gray-200 hover:text-accent-foreground",
         secondary:
           "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",

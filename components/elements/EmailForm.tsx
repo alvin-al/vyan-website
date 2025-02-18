@@ -12,7 +12,7 @@ const EmailForm = () => {
   };
 
   return (
-    <div className='w-[600px]'>
+    <div className='w-full lg:w-[600px]'>
       <form onSubmit={handleSubmit} className='flex flex-col gap-2'>
         <div className='flex gap-2'>
           <input
@@ -35,7 +35,7 @@ const EmailForm = () => {
           />
         </div>
         <textarea
-          className='py-2 px-4 border w-full h-52 text-wrap focus:border-black focus:outline-none'
+          className='py-2 px-4 border lg:w-full h-52 text-wrap focus:border-black focus:outline-none'
           name='message'
           onChange={(e) => setMessage(e.target.value)}
           value={message}

@@ -10,9 +10,9 @@ import Video from "@/components/sections/Video";
 
 export default function Home() {
   return (
-    <div className=''>
+    <div className='w-full'>
       <Header />
-      <main className='grid gap-24'>
+      <main className='w-full grid gap-24'>
         <Hero />
         <Video />
         <About />
