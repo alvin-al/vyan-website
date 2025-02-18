@@ -16,7 +16,7 @@ const Hero = () => {
           like a local!
         </div>
         <div className='w-fit'>
-          <Button className='rounded-full px-8 py-4 font-semibold bg-gray-800'>
+          <Button className='rounded-full px-8 py-6 font-semibold bg-gray-800'>
             Contact Me
           </Button>
         </div>

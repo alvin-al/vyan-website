@@ -22,3 +22,9 @@ export interface TestimonialCardTypes {
   description: string;
   profilePicture: string | StaticImageData;
 }
+
+export interface StepListSquareTypes {
+  no: number;
+  title: string;
+  description: string;
+}
