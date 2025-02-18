@@ -4,7 +4,6 @@ import TextArea from "../elements/TextArea";
 import gambar1 from "@/public/image 17.png";
 import gambar2 from "@/public/hero/1.png";
 import gambar3 from "@/public/hero/2.png";
-import gambar4 from "@/public/hero/profile-pic.png";
 import Image from "next/image";
 
 const imageList = [

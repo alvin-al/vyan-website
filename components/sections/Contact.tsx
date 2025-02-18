@@ -3,6 +3,7 @@ import SectionTitle from "../elements/SectionTitle";
 import StepListSquare from "../elements/StepListSquare";
 import TextArea from "../elements/TextArea";
 import EmailForm from "../elements/EmailForm";
+import ContactList from "../elements/ContactList";
 
 const bookStep = [
   {
@@ -38,8 +39,8 @@ const Contact = () => {
           Feel free to reach out! Lets connect!
         </div>
         <EmailForm />
+        <ContactList />
       </TextArea>
-      <div className='h-screen'></div>
     </div>
   );
 };

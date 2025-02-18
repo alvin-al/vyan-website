@@ -42,9 +42,7 @@ const EmailForm = () => {
           placeholder='Write your message here...'
           required
         />
-        <Button className='rounded-full px-8 py-6 font-semibold bg-gray-800 w-fit mt-4'>
-          Send the Message
-        </Button>
+        <Button>Send the Message</Button>
       </form>
     </div>
   );
