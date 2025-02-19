@@ -30,15 +30,11 @@ const imageList = [
   { id: 2, src: gambar1 },
   { id: 3, src: gambar2 },
   { id: 4, src: gambar3 },
-  { id: 5, src: gambar4 },
-  { id: 6, src: gambar1 },
-  { id: 7, src: gambar2 },
-  { id: 8, src: gambar3 },
 ];
 
 const ClientSaid = () => {
   return (
-    <div className='h-fit lg:w-fit sm:mb-0 pb-24'>
+    <div className='h-full lg:w-fit sm:mb-0 pb-24 relative'>
       <div className='px-4 md:px-8'>
         <SectionTitle black>WHAT MY CLIENT SAID</SectionTitle>
         <div className='lg:py-4 lg:pb-8'>
@@ -53,17 +49,25 @@ const ClientSaid = () => {
           ))}
         </div>
       </div>
-      <div className='mt-16 w-full h-48 flex gap-2 '>
-        {imageList.map((item) => (
-          <div key={item.id} className='h-full w-fit'>
-            <Image
-              src={item.src}
-              key={item.id}
-              alt='Client Photos'
-              className='w-auto h-full rounded-sm object-cover'
-            />
-          </div>
-        ))}
+      <div className='h-48 mt-16 w-full relative overflow-x-clip '>
+        <div className='w-max h-48 flex gap-2 animate-marquee  absolute'>
+          {[
+            ...imageList,
+            ...imageList,
+            ...imageList,
+            ...imageList,
+            ...imageList,
+            ...imageList,
+          ].map((item, index) => (
+            <div key={`${item.id}-${index}`} className='h-full w-fit'>
+              <Image
+                src={item.src}
+                alt='Client Photos'
+                className='w-full h-full rounded-sm object-cover'
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

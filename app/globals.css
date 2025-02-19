@@ -75,3 +75,19 @@ input:active {
   border: solid 1px black;
 }
 
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 70s linear infinite;
+}
+
+.animate-marquee-s {
+  animation: marquee 10s linear infinite;
+}
