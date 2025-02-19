@@ -41,7 +41,7 @@ const ClientSaid = () => {
     <div className='h-fit  w-screen lg:w-fit'>
       <div className='px-4 md:px-8'>
         <SectionTitle black>WHAT MY CLIENT SAID</SectionTitle>
-        <div className='py-12'>
+        <div className='lg:py-12'>
           {testimonialData.map((item) => (
             <TestimonialCard
               name={item.name}

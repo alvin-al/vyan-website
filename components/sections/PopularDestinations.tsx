@@ -41,7 +41,7 @@ const PopularDestinations = () => {
   };
 
   return (
-    <div className='w-screen md:w-full h-fit lg:h-[100vh] relative overflow-hidden'>
+    <div className='w-screen sm:w-full bg-yellow-50 h-fit lg:h-[100vh] relative overflow-hidden'>
       {/* BG Image */}
       <div className='z-0 overflow-hidden'>
         <Image
@@ -49,7 +49,7 @@ const PopularDestinations = () => {
           alt='uluwatu'
           width={1000}
           height={600}
-          className='h-80 w-auto lg:h-auto lg:w-full object-cover'
+          className='h-80 sm:h-96 w-auto sm:w-full lg:h-auto lg:w-full object-cover'
         />
       </div>
       {/* Text Above */}
@@ -57,7 +57,7 @@ const PopularDestinations = () => {
         {/* Title */}
         <TitleSection>POPULAR TRIP DESTINATION</TitleSection>
         {/* List */}
-        <div className='w-fit pt-24 lg:pt-0'>
+        <div className='w-fit pt-24 sm:pt-40 lg:pt-0'>
           <DestinationList
             items={listDestination}
             onItemChange={handleItemChange}
