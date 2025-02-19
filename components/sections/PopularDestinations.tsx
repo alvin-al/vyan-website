@@ -41,23 +41,24 @@ const PopularDestinations = () => {
   };
 
   return (
-    <div className='w-screen sm:w-full bg-yellow-50 h-fit lg:h-[100vh] relative overflow-hidden'>
-      {/* BG Image */}
+    <div className='relative h-screen overflow-hidden bg-yellow-50 lg:h-[100vh] w-screen sm:mb-0 mb-24'>
+      {/* Background Image */}
       <div className='z-0 overflow-hidden'>
         <Image
           src={backgroundImage}
           alt='uluwatu'
           width={1000}
           height={600}
-          className='h-80 sm:h-96 w-auto sm:w-full lg:h-auto lg:w-full object-cover'
+          className='h-lvh w-full object-cover sm:h-96 lg:h-auto'
         />
       </div>
-      {/* Text Above */}
-      <div className='z-10 absolute top-0 text-white w-full md:h-full p-4 lg:p-8 flex flex-col justify-between lg:pb-16'>
+
+      {/* Content Overlay */}
+      <div className='absolute top-0 z-10 flex h-full w-full flex-col  justify-between p-4 text-white lg:p-8 lg:pb-16'>
         {/* Title */}
         <TitleSection>POPULAR TRIP DESTINATION</TitleSection>
         {/* List */}
-        <div className='w-fit pt-24 sm:pt-40 lg:pt-0'>
+        <div className='w-fit pb-8 sm:pt-40 lg:pt-0'>
           <DestinationList
             items={listDestination}
             onItemChange={handleItemChange}

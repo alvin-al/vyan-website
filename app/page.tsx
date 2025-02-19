@@ -10,9 +10,9 @@ import Video from "@/components/sections/Video";
 
 export default function Home() {
   return (
-    <div className='w-full'>
+    <div className='overflow-auto'>
       <Header />
-      <main className='w-full grid gap-24'>
+      <main className='grid p-0 m-0 gap-12 sm:gap-24'>
         <Hero />
         <Video />
         <About />
@@ -22,7 +22,6 @@ export default function Home() {
         <Contact />
         <Footer />
       </main>
-      <footer className='row-start-3 flex gap-6 flex-wrap items-center justify-center'></footer>
     </div>
   );
 }

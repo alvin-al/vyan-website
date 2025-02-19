@@ -15,7 +15,7 @@ const imageList = [
 
 const Gallery = () => {
   return (
-    <div className='px-4 md:px-8 grid w-screen lg:w-full'>
+    <div className='px-4 md:px-8   w-screen lg:w-full mb-24 sm:mb-0'>
       <SectionTitle black>GALLERY</SectionTitle>
       <TextArea>
         <div className='text-wrap text-xl md:text-3xl leading-normal md:leading-normal text-gray-800 my-12 lg:my-16'>
@@ -24,9 +24,9 @@ const Gallery = () => {
           every journey. Let these photos inspire your next adventure!
         </div>
       </TextArea>
-      <div className='grid grid-cols-2 w-full h-fit gap-4'>
+      <div className='grid sm:grid-cols-2 w-full h-fit gap-4'>
         {imageList.map((item) => (
-          <div key={item.id} className='w-full h-48 lg:h-96 bg-yellow-50'>
+          <div key={item.id} className='w-full h-fit lg:h-96 bg-yellow-50'>
             <Image
               src={item.src}
               alt='1'

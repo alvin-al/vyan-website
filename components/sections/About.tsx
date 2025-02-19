@@ -10,7 +10,7 @@ const clientDataContent = [
 
 const About = () => {
   return (
-    <div className='w-screen px-4 sm:mb-32 lg:mb-0 md:px-8 lg:py-20'>
+    <div className='w-screen px-4 lg:mb-12 md:px-8 mb-24 '>
       <TextArea>
         <div className='text-wrap text-xl md:text-3xl leading-normal md:leading-normal text-gray-800'>
           Hey, I’m Vyan! I’ve been showing travelers around this island for
@@ -20,7 +20,7 @@ const About = () => {
           or just chill on the beach, I’ve got you covered. Let’s make your Bali
           trip one to remember!
         </div>
-        <div className='grid grid-cols-2 gap-y-8 sm:grid-cols-3 text-gray-800'>
+        <div className='grid grid-cols-2 gap-y-8 sm:grid-cols-3 text-gray-800 mt-8 sm:mt-16'>
           {clientDataContent.map((item) => (
             <ClientData
               qty={item.qty}

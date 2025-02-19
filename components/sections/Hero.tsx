@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 
 const Hero = () => {
   return (
-    <div className='w-screen px-4 md:px-8 flex flex-wrap'>
+    <div className='w-full h-fit px-4 md:px-8 flex flex-wrap '>
       {/* teks */}
       <div className='w-fit h-[70vh] lg:h-[88vh] z-10 absolute bg-transparent justify-end md:justify-start md:pt-24 flex gap-8 flex-col'>
         {" "}
@@ -25,24 +25,24 @@ const Hero = () => {
         </div>
       </div>
       {/* gambar */}
-      <div className='w-fit lg:w-full h-96 sm:h-[45vh] mb-80 sm:mb-96 lg:mb-0 lg:h-[88vh] z-0 flex flex-wrap items-start lg:items-end gap-4 justify-end '>
+      <div className='w-fit lg:w-full h-96 sm:h-[45vh] lg:h-[88vh] mb-80 sm:mb-96 lg:mb-0 z-0 flex items-start lg:items-end gap-4 justify-end '>
         <div className='h-full flex flex-1 flex-col gap-4 order-2 lg:order-1 w-1/2 lg:flex-row lg:items-end lg:w-fit lg:justify-end'>
-          <div className=' order-3 md:order-1 h-2/5 sm:h-1/2 lg:h-fit'>
+          <div className='order-3 md:order-2 h-2/5 sm:h-1/2 lg:h-[310px] xl:h-[310px] w-full lg:w-[250px] xl:w-[250px]'>
             <Image
               src={image2}
-              width={250}
-              height={310}
+              width={500}
+              height={620}
               alt='1'
-              className='rounded-lg h-full sm:w-full lg:h-fit object-cover'
+              className='rounded-lg h-full w-full object-cover'
             />
           </div>
-          <div className='rounded-lg order-2 md:order-2 h-3/5 sm:h-1/2 lg:h-fit'>
+          <div className='rounded-lg order-2 md:order-1 h-3/5 sm:h-1/2 lg:h-[160px] xl:h-[160px] w-full lg:w-[260px] xl:w-[260px]'>
             <Image
               src={image1}
-              width={260}
-              height={160}
+              width={520}
+              height={320}
               alt='1'
-              className='rounded-lg h-full sm:w-full lg:h-fit object-cover'
+              className='rounded-lg h-full w-full object-cover'
             />
           </div>
         </div>

@@ -12,30 +12,30 @@ const EmailForm = () => {
   };
 
   return (
-    <div className='w-full lg:w-[600px]'>
+    <div className='mt-8 mb-16 w-full lg:w-[600px]'>
       <form onSubmit={handleSubmit} className='flex flex-col gap-2'>
         <div className='flex gap-2'>
           <input
-            type='email'
-            className='py-2 px-4 border focus:border-black w-1/2 focus:outline-none'
-            name='email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder='Email'
-            required
-          />
-          <input
             type='text'
-            className='py-2 px-4 border focus:border-black focus:outline-none w-1/2'
+            className='py-2 px-4 border-[1.5px] border-gray-400 focus:border-gray-800 focus:outline-none w-1/2'
             name='name'
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder='Name'
             required
           />
+          <input
+            type='email'
+            className='py-2 px-4 border-[1.5px] border-gray-400 focus:border-gray-800 w-1/2 focus:outline-none'
+            name='email'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder='Email'
+            required
+          />
         </div>
         <textarea
-          className='py-2 px-4 border lg:w-full h-52 text-wrap focus:border-black focus:outline-none'
+          className='py-2 px-4 border-[1.5px] border-gray-400 lg:w-full h-52 text-wrap focus:border-gray-800 focus:outline-none'
           name='message'
           onChange={(e) => setMessage(e.target.value)}
           value={message}
