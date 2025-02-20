@@ -9,9 +9,8 @@ const quicksand = Quicksand({
 
 const menu = [
   { title: "About", link: "/" },
-  { title: "Services", link: "/" },
   { title: "Testimonials", link: "/" },
-  { title: "FAQ", link: "/" },
+  { title: "Gallery", link: "/" },
   { title: "Contact", link: "/" },
 ];
 

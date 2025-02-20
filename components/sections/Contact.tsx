@@ -33,13 +33,16 @@ const Contact = () => {
         <SectionTitle black>HOW TO BOOK</SectionTitle>
       </div>
       <StepListSquare items={bookStep} />
-      <div className='px-4 md:px-0 w-screen lg:w-full'>
+      <div className='px-4 md:px-8 lg:px-0 w-screen lg:w-full'>
         <TextArea>
           <div className=' w-fit text-xl md:text-3xl leading-normal text-gray-800 lg:mt-12'>
             Have any questions or ready to plan your Bali adventure? <br />
-            Feel free to reach out! Lets connect!
+            Lets connect!
           </div>
           <EmailForm />
+          <div className=' w-fit text-lg leading-normal text-gray-800 lg:mt-12 mb-4'>
+            Feel free to DM me on any of these platforms:
+          </div>
           <ContactList />
         </TextArea>
       </div>

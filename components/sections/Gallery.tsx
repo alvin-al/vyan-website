@@ -26,11 +26,11 @@ const Gallery = () => {
       </TextArea>
       <div className='grid sm:grid-cols-2 w-full h-fit gap-4'>
         {imageList.map((item) => (
-          <div key={item.id} className='w-full h-fit lg:h-96 bg-yellow-50'>
+          <div key={item.id} className='w-full h-fit  md:h-96 bg-yellow-50'>
             <Image
               src={item.src}
               alt='1'
-              className='object-cover w-full h-full rounded-sm'
+              className='object-cover w-full h-full rounded-lg'
             />
           </div>
         ))}

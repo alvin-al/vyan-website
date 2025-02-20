@@ -17,7 +17,7 @@ const EmailForm = () => {
         <div className='flex gap-2'>
           <input
             type='text'
-            className='py-2 px-4 border-[1.5px] border-gray-400 focus:border-gray-800 focus:outline-none w-1/2'
+            className='py-2 px-4 border-[1.5px] border-gray-400 focus:border-gray-800 focus:outline-none w-1/2 transition delay-75 hover:bg-gray-100'
             name='name'
             value={name}
             onChange={(e) => setName(e.target.value)}
@@ -26,7 +26,7 @@ const EmailForm = () => {
           />
           <input
             type='email'
-            className='py-2 px-4 border-[1.5px] border-gray-400 focus:border-gray-800 w-1/2 focus:outline-none'
+            className='py-2 px-4 border-[1.5px] border-gray-400 focus:border-gray-800 w-1/2 focus:outline-none transition delay-75 hover:bg-gray-100'
             name='email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -35,14 +35,14 @@ const EmailForm = () => {
           />
         </div>
         <textarea
-          className='py-2 px-4 border-[1.5px] border-gray-400 lg:w-full h-52 text-wrap focus:border-gray-800 focus:outline-none'
+          className='py-2 px-4 border-[1.5px] border-gray-400 lg:w-full h-52 text-wrap focus:border-gray-800 focus:outline-none transition delay-75 hover:bg-gray-100'
           name='message'
           onChange={(e) => setMessage(e.target.value)}
           value={message}
           placeholder='Write your message here...'
           required
         />
-        <Button>Send the Message</Button>
+        <Button className='mt-4'>Send the Message</Button>
       </form>
     </div>
   );

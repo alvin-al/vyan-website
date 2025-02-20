@@ -41,7 +41,7 @@ const PopularDestinations = () => {
   };
 
   return (
-    <div className='relative h-screen overflow-hidden bg-yellow-50 lg:h-[100vh] w-screen sm:mb-0 mb-24'>
+    <div className='relative h-screen overflow-hidden md:h-fit bg-gray-300 lg:h-[100vh] w-screen sm:mb-0 mb-24'>
       {/* Background Image */}
       <div className='z-0 overflow-hidden'>
         <Image
@@ -58,7 +58,7 @@ const PopularDestinations = () => {
         {/* Title */}
         <TitleSection>POPULAR TRIP DESTINATION</TitleSection>
         {/* List */}
-        <div className='w-fit pb-8 sm:pt-40 lg:pt-0'>
+        <div className='w-fit pb-8 xl:pt-40 lg:pt-0'>
           <DestinationList
             items={listDestination}
             onItemChange={handleItemChange}

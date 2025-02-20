@@ -5,10 +5,18 @@ import { Button } from "../ui/button";
 import Link from "next/link";
 
 const socialLink = [
-  { title: "WhatsApp 1", link: "/", icon: <FaWhatsapp /> },
-  { title: "WhatsApp 2", link: "/", icon: <FaWhatsapp /> },
-  { title: "Instagram", link: "/", icon: <FaInstagram /> },
-  { title: "Email", link: "/", icon: <LuMail /> },
+  {
+    title: "WhatsApp 1",
+    link: "https://wa.me/+6281238423177",
+    icon: <FaWhatsapp />,
+  },
+  {
+    title: "WhatsApp 2",
+    link: "https://wa.me/+6282146798282",
+    icon: <FaWhatsapp />,
+  },
+  { title: "Instagram", link: "https://instagram.com", icon: <FaInstagram /> },
+  { title: "Email", link: "mailto:novussofia@gmail.com", icon: <LuMail /> },
 ];
 
 const ContactList = () => {
