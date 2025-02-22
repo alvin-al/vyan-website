@@ -1,14 +1,44 @@
 "use client";
 import React, { useState } from "react";
 import { Button } from "../ui/button";
+import { Loader2 } from "lucide-react";
 
 const EmailForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
+  const [error, setError] = useState("error");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    setSuccess("");
+    setError("");
+
+    try {
+      const response = await fetch("http://localhost:3005/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSuccess("Sudah dikirim");
+        setName("");
+        setEmail("");
+        setMessage("");
+      } else {
+        setError(result.message || "Error");
+      }
+    } catch {
+      setError("Error");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -42,7 +72,25 @@ const EmailForm = () => {
           placeholder='Write your message here...'
           required
         />
-        <Button className='mt-4'>Send the Message</Button>
+        {!loading && !success && (
+          <Button className='mt-4'>Send the Message</Button>
+        )}
+        {loading && (
+          <Button className='mt-4' disabled>
+            <Loader2 className='animate-spin' />
+            Please wait
+          </Button>
+        )}
+        {success && (
+          <Button className='mt-4' variant='success' disabled>
+            Success
+          </Button>
+        )}
+        {error == "Error" && (
+          <Button className='mt-4' variant='error' disabled>
+            Error
+          </Button>
+        )}
       </form>
     </div>
   );
