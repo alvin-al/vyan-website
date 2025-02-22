@@ -18,11 +18,14 @@ const EmailForm = () => {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:3005/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
-      });
+      const response = await fetch(
+        "https://vyan-email.onrender.com/send-email",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, message }),
+        }
+      );
 
       const result = await response.json();
 
