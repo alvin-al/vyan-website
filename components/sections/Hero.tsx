@@ -7,7 +7,7 @@ import { Button } from "../ui/button";
 
 const Hero = () => {
   return (
-    <div className='w-full min-h-dvh px-4 lg:px-8 py-4 lg:py-0 relative flex flex-col lg:flex-row justify-between'>
+    <div className='w-full h-fit mb-8 md:mb-0 px-4 lg:px-8 py-4 lg:py-0 relative flex flex-col lg:flex-row justify-between'>
       {/* Combined container for better mobile layout */}
       <div className='w-full flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between gap-4 md:gap-8'>
         {/* Text section */}
@@ -51,7 +51,7 @@ const Hero = () => {
                 />
               </div>
             </div>
-            <div className='order-1 lg:order-2 w-1/2 lg:w-auto h-96 md:w-1/3 lg:h-[630px]'>
+            <div className='order-1 lg:order-2 w-1/2 lg:w-auto h-96 md:w-1/3 lg:h-[600px] 2xl:h-[630px]'>
               <Image
                 src={profileImage}
                 width={470}
