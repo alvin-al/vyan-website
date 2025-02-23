@@ -75,7 +75,7 @@ const EmailForm = () => {
           placeholder='Write your message here...'
           required
         />
-        {!loading && !success && !error && (
+        {!loading && !success && error !== "Error" && (
           <Button className='mt-4'>Send the Message</Button>
         )}
         {loading && (

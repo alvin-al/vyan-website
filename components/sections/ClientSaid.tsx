@@ -1,12 +1,11 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import SectionTitle from "../elements/SectionTitle";
 import TestimonialCard from "../elements/TestimonialCard";
 import gambarcontoh from "@/public/image 13.png";
-import gambar1 from "@/public/image 17.png";
-import gambar2 from "@/public/hero/1.png";
-import gambar3 from "@/public/hero/2.png";
-import gambar4 from "@/public/hero/profile-pic.png";
 import Image from "next/image";
+
+import client from "@/lib/contentful";
 
 const testimonialData = [
   {
@@ -25,14 +24,36 @@ const testimonialData = [
   },
 ];
 
-const imageList = [
-  { id: 1, src: gambar4 },
-  { id: 2, src: gambar1 },
-  { id: 3, src: gambar2 },
-  { id: 4, src: gambar3 },
-];
-
 const ClientSaid = () => {
+  interface ContentfulImage {
+    fields: {
+      title: string;
+      file: {
+        url: string;
+      };
+    };
+  }
+
+  const [data, setData] = useState<ContentfulImage[] | null>(null);
+
+  useEffect(() => {
+    const fetch = async () => {
+      try {
+        const entry = await client.getEntry("z479mRTI4xZEd6FGm3m0Z");
+
+        if (entry?.fields?.imageContent) {
+          setData(entry.fields.imageContent as ContentfulImage[]);
+        }
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    };
+
+    fetch();
+  }, []);
+
+  console.log(data);
+
   return (
     <div className='h-full lg:w-fit sm:mb-0 pb-24 relative'>
       <div className='px-4 md:px-8'>
@@ -51,18 +72,13 @@ const ClientSaid = () => {
       </div>
       <div className='h-48 mt-16 w-full relative overflow-x-clip '>
         <div className='w-max h-48 flex gap-2 animate-marquee  absolute'>
-          {[
-            ...imageList,
-            ...imageList,
-            ...imageList,
-            ...imageList,
-            ...imageList,
-            ...imageList,
-          ].map((item, index) => (
-            <div key={`${item.id}-${index}`} className='h-full w-fit'>
+          {data?.map((data) => (
+            <div key={data.fields.title} className='h-full w-fit'>
               <Image
-                src={item.src}
-                alt='Client Photos'
+                src={`https:${data.fields.file.url}`}
+                alt='1'
+                width={200}
+                height={300}
                 className='w-full h-full rounded-sm object-cover'
               />
             </div>

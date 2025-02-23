@@ -58,6 +58,7 @@ const Hero = () => {
                 height={630}
                 alt='Profile'
                 className='rounded-lg object-cover h-full'
+                priority
               />
             </div>
           </div>

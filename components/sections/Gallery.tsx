@@ -1,19 +1,40 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import SectionTitle from "../elements/SectionTitle";
 import TextArea from "../elements/TextArea";
-import gambar1 from "@/public/image 17.png";
-import gambar2 from "@/public/hero/1.png";
-import gambar3 from "@/public/hero/2.png";
 import Image from "next/image";
-
-const imageList = [
-  { id: 1, src: gambar3 },
-  { id: 2, src: gambar1 },
-  { id: 3, src: gambar2 },
-  { id: 4, src: gambar3 },
-];
+import client from "@/lib/contentful";
 
 const Gallery = () => {
+  interface ImageContent {
+    fields: {
+      title: string;
+      file: {
+        url: string;
+      };
+    };
+  }
+
+  const [data, setData] = useState<ImageContent[] | null>(null);
+
+  useEffect(() => {
+    const fetch = async () => {
+      try {
+        const entry = await client.getEntry("1oBF7ps5kcfxOlFgpG9q6s");
+
+        if (entry?.fields?.imageContent) {
+          setData(entry.fields.imageContent as ImageContent[]);
+        }
+      } catch (error) {
+        console.error("Error fetching data: ", error);
+      }
+    };
+
+    fetch();
+  }, []);
+
+  console.log(data);
+
   return (
     <div className='px-4 md:px-8   w-screen lg:w-full mb-24 sm:mb-0'>
       <SectionTitle black>GALLERY</SectionTitle>
@@ -25,11 +46,16 @@ const Gallery = () => {
         </div>
       </TextArea>
       <div className='grid sm:grid-cols-2 w-full h-fit gap-4'>
-        {imageList.map((item) => (
-          <div key={item.id} className='w-full h-fit  md:h-96 bg-yellow-50'>
+        {data?.map((data) => (
+          <div
+            key={data.fields.title}
+            className='w-full h-fit  md:h-96 bg-yellow-50'
+          >
             <Image
-              src={item.src}
-              alt='1'
+              src={`https:${data.fields.file.url}`}
+              alt='gallery'
+              width={400}
+              height={400}
               className='object-cover w-full h-full rounded-lg'
             />
           </div>
