@@ -10,7 +10,10 @@ const clientDataContent = [
 
 const About = () => {
   return (
-    <div className='w-screen px-4 lg:mb-12 md:px-8 mb-24 '>
+    <div
+      className='w-screen px-4 lg:mb-12 md:px-8 mb-24 scroll-m-24'
+      id='about'
+    >
       <TextArea>
         <div className='text-wrap text-xl md:text-3xl leading-normal md:leading-normal text-gray-800'>
           Hey, I’m Vyan! I’ve been showing travelers around this island for

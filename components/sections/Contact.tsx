@@ -28,7 +28,7 @@ const bookStep = [
 
 const Contact = () => {
   return (
-    <div className='w-screen lg:w-full mb-12'>
+    <div className='w-screen lg:w-full mb-12 scroll-mt-8' id='contact'>
       <div className='px-4 md:px-8'>
         <SectionTitle black>HOW TO BOOK</SectionTitle>
       </div>

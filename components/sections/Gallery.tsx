@@ -36,7 +36,10 @@ const Gallery = () => {
   console.log(data);
 
   return (
-    <div className='px-4 md:px-8   w-screen lg:w-full mb-24 sm:mb-0'>
+    <div
+      className='px-4 md:px-8   w-screen lg:w-full mb-24 sm:mb-0 scroll-mt-8'
+      id='gallery'
+    >
       <SectionTitle black>GALLERY</SectionTitle>
       <TextArea>
         <div className='text-wrap text-xl md:text-3xl leading-normal md:leading-normal text-gray-800 my-12 lg:my-16'>

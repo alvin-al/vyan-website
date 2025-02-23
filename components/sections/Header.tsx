@@ -8,10 +8,11 @@ const quicksand = Quicksand({
 });
 
 const menu = [
-  { title: "About", link: "/" },
-  { title: "Testimonials", link: "/" },
-  { title: "Gallery", link: "/" },
-  { title: "Contact", link: "/" },
+  { title: "About", link: "#about" },
+  { title: "Popular Destination", link: "#popular" },
+  { title: "Testimonial", link: "#testimonial" },
+  { title: "Gallery", link: "#gallery" },
+  { title: "Contact", link: "#contact" },
 ];
 
 const Header = () => {
@@ -25,7 +26,11 @@ const Header = () => {
       <div>
         <ul className='hidden lg:flex flex-row gap-4 items-center font-medium text-base absolute left-1/2 -translate-x-1/2'>
           {menu.map((item, index) => {
-            return <li key={index}>{item.title}</li>;
+            return (
+              <li key={index} className='hover:underline'>
+                <Link href={item.link}>{item.title}</Link>
+              </li>
+            );
           })}
         </ul>
       </div>

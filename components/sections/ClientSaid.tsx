@@ -55,7 +55,10 @@ const ClientSaid = () => {
   console.log(data);
 
   return (
-    <div className='h-full lg:w-fit sm:mb-0 pb-24 relative'>
+    <div
+      className='h-full lg:w-fit sm:mb-0 pb-24 relative scroll-mt-8'
+      id='testimonial'
+    >
       <div className='px-4 md:px-8'>
         <SectionTitle black>WHAT MY CLIENT SAID</SectionTitle>
         <div className='lg:py-4 lg:pb-8'>
